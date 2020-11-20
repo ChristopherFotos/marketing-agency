@@ -1,0 +1,505 @@
+/*===========================
+Universal selectors, 
+resets, and animation classes
+=============================*/
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    overflow: hidden;
+}
+
+button {
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+button:active {
+    border:none;
+    background-color: #FEC107;
+}
+
+.opaque {
+    opacity: 1;
+    transition: opacity 3s
+}
+
+/*==============
+  Hero section
+==============*/
+
+#hero {
+    height: 100vh;
+    position: fixed;
+}
+
+
+.main {
+    display:flex;
+    height: 100vh;
+    width: 100vw
+}
+.main-left {
+    background-color: rgb(30,30,35);
+    height: 100vh;
+    width: 45vw
+}
+.main-right {
+    height: 100vh;
+    width: 55vw;
+}
+
+.main-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content-left {
+    position: relative;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%); 
+    animation-name: left-on-load;
+    animation-duration: 3s;
+}
+
+.main-heading{
+    font-size: 4vw;
+    font-family: Anton;
+    color: #f8f4ec;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+
+.subhead {
+    font-family: Montserrat;
+    font-size: 1vw;
+    font-weight: lighter;
+    color: white;
+    text-align: center;
+}
+
+.underline {
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    position: absolute;
+    left: 15%;
+    width: 70%;
+    padding: 5px;
+}
+
+.logo {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10%;
+    margin: auto;
+    /* opacity: 0.6; */
+}
+
+#consultation-btn {
+    position: relative;
+    left: 50%;
+    top: 30px;
+    transform: translateX(-50%);
+    background-color: rgb(30,30,35);
+    color: white;
+    font-family: Montserrat;
+    border-radius: 10px;
+    border: 2px solid #FEC107;
+    transition: all 0.4s
+}
+
+.hero-copy {
+    color: #f8f4ec;
+    width: 60vh;
+    margin: auto;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 1vw;
+    margin-top: 40px;
+}
+
+#consultation-btn:hover{
+    background-color: #FEC107;
+    color:  rgb(30,30,35);
+    transition: all 0.4s
+}
+
+/*==============
+main-right
+==============*/
+
+.main-right {
+    overflow: hidden;
+}
+
+.overlay-right{
+    position: relative;
+    top: -101%;
+    z-index: 2;
+    background-color: rgb(30,30,35);
+    width: 100%;
+    height: 101%;
+    animation-name: right-fade;
+    animation-duration: 5s;
+    animation-delay: 1.8s;
+    animation-fill-mode: forwards;
+    transition: opacity 1s;
+}
+
+/*============================
+   Vertical sliding sections
+==============================*/
+
+#sect-2{
+    display: block;
+    position: absolute;
+    top: 100vh;
+    z-index: 1;
+    width: 100vw;
+    height: 50vh;
+    background-color: #f8f4ec;
+    margin-bottom: 50%;
+    top: -100vh;
+    transition: top 1.5s;
+    border-bottom: 5px solid #FEC107;
+}
+
+#sect-2-heading{
+    color: rgb(30,30,35);
+    z-index: 9;
+    padding-top: 2%;
+    text-align: left;
+    margin-left: 15%;
+    width: 70%;
+    font-size: 40px;
+    border-bottom: 2px solid rgb(30,30,35);
+}
+
+#sect-2-subhead{
+    color: rgb(30,30,35);
+    text-align: left;
+    font-weight: normal;
+    padding-bottom: 1%;
+    margin-left: 15%; 
+}
+
+#sect-2-ul {
+    border-bottom: 1px solid #FEC107;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 1px
+}
+
+.outer-container{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    width: 170vh;
+}
+
+.slider-buttons {
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    top:80%;
+    font-family: Anton;
+    cursor: pointer;
+    font-size: 40px;
+}
+
+.slider-button:hover{
+    color: #FEC107
+}
+
+#backward{
+margin-right: 20px;
+user-select:none
+}
+
+#forward{
+user-select:none
+}
+
+.card{
+    min-width: 50vh;
+    min-height: 180%;
+    transform:scale(1.1);
+    color: rgb(30,30,35);
+    padding-bottom: 20px;
+    padding: 20px;
+    z-index: 2; 
+    margin: 30px;
+    transition: transform 0.8s, border 0.8s, background-color 0.4s;
+    cursor: pointer;
+}
+
+.card * {
+ cursor: pointer;
+}
+
+.card:hover{
+    position: relative;
+    background-color: #f3ede0;
+    z-index: 10;
+    transform: scale(1.2);
+    transition: transform 0.8s, border 0.8s, background-color 0.4s;
+}
+
+.card-heading{
+    font-family: Anton;
+    color: rgb(30,30,35);
+    margin-top: 3%
+}
+
+
+.card-ul {
+    border-bottom: 2px solid rgb(30,30,35);
+    width: 50%;
+    padding-top: 15px;
+}
+
+.card-text-dark {
+    font-family: Montserrat;
+    color: rgb(30,30,35);
+    font-size: 1.6vh;
+}
+
+#btm-sect {
+    height: 50vh;
+    border-top: 5px solid #FEC107;
+    width: 100vw;
+    position:absolute;
+    bottom: -100vh;
+    background-color: rgb(30,30,35);
+    transition: bottom 1.5s;
+}
+
+.btm-heading {
+    position: absolute;
+    text-align: left;
+    color: #FEC107;
+    z-index: 10;
+    position: absolute;
+    margin-left: 15vw;
+    width: 25%;
+    padding-top: 20px;
+    transform: translateX(800%);
+    transition: transform 0.8s;
+}
+
+
+
+#back-btn {
+    position: absolute;
+    top: -2%;
+    padding: 10px;
+    margin-top: 25px;
+    margin-left: 10px;
+    background-color: #f8f4ec;
+
+    color: rgb(30,30,35);
+    font-weight: bold;
+    transition: all 0.7s
+}
+
+#back-btn:hover{
+    background-color: rgb(30,30,35);
+    color: #f8f4ec;
+}
+
+
+
+/*=============================
+   Horizontal sliding sections
+===============================*/
+
+#pkg1{
+
+}
+
+#pkg2{
+
+}
+
+#pkg2{
+
+}
+
+#starter-svg{
+    margin-left: 15vw;
+    width: 500px;
+    height: 500px;
+    position:absolute;
+    top: 30%;
+    transition: transform 1s;
+    transform: translateX(-400%);
+}
+
+#starter-svg img{
+    width: 50%;
+    height: 50%;
+    object-fit:cover 
+}
+
+#hustler-svg{
+    margin-left: 15vw;
+    width: 500px;
+    height: 500px;
+    z-index: 0;
+    position: absolute;
+    top: 30%;
+    transition: transform 1s;
+    transform: translateX(-400%);
+}
+
+#hustler-svg img{
+    width: 50%;
+    height: 50%;
+    object-fit:cover 
+}
+
+#instruct{
+    left: 50%;
+    transform: translateX(-25%);
+    top:45%;
+    width: 100%;
+    position: absolute;
+    font-family: Anton;
+    color: rgb(60, 60, 83);
+    font-size: 3.7em;
+    transition: opacity 0.8s;
+}
+
+
+#mvp-svg{
+    margin-left: 15vw;
+    width: 400px;
+    height: 400px;
+    position:absolute;
+    top: 30%;
+    left: -5%;
+    transition: transform 1s;
+    transform: translateX(-400%);
+}
+
+#mvp-svg img {
+    width: 60%;
+    height: 60%;
+    margin-left:60px;
+    object-fit:contain; 
+}
+
+.pull-right {
+    width: 300px;
+    height: 300px;
+    transform: translateX(0) !important;
+    transition: transform 1s;
+}
+
+.pull-left {  
+    transform: translateX(0) !important;
+    transition: transform 1s;
+}
+
+.pull-up {
+    transform: translateX(0) !important;
+    transition: transform 1s;
+}
+
+.svg {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+.details-slider{
+    position:absolute;
+    top: 15%;
+    left: 50%;
+    width: 43vw;
+    transform: translateY(1000%);
+    transition: transform 0.4s;
+}
+
+.details-p {
+    color:#f8f4ec;
+    font-family:Montserrat;
+    font-size: 0.8em;
+    width: 50%;
+    border-bottom: 2px solid #FEC107;
+    padding-bottom: 20px;
+}
+
+.features {
+    color: #f8f4ec;
+    padding-left: 15px;
+    padding-top: 25px;
+    font-family: Montserrat;
+}
+
+.slider-btn {
+    background-color: rgb(30,30,35);
+    position: relative;
+    left: 100%;
+    transform: translateX(-100%);
+    color: white;
+    font-family: Montserrat;
+    border-radius: 10px;
+    border: 2px solid #FEC107;
+    transition: all 0.4s;
+    padding: 1rem 1.2rem
+}
+
+.slider-btn:hover{
+    background-color: #FEC107;
+    color:  rgb(30,30,35);
+    transition: all 0.4s
+}
+
+/*===================
+     Animations
+===================*/
+
+@keyframes right-fade{
+    from{ opacity: 1}
+    to{opacity:0.2}
+}
+
+@keyframes left-on-load {
+    from{margin-top: -800px; opacity: 0;}
+    to{margin-top: 0px; opacity: 1;}
+}
+
+.float-down{
+    top: 0 !important;
+
+    position:sticky;
+    transition: top 1.5s;
+}
+
+.float-up{
+    bottom: 0vh !important;
+    transition: top 1.5s;
+}
+
+
+.instruct-fade {
+   opacity: 0;
+   transition: opacity 0.8s 
+}
